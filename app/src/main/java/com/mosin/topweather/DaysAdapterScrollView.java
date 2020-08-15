@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class DaysAdapterScrollView extends RecyclerView.Adapter<DaysAdapterScrollView.ViewHolder> {
 
-    //    private String [] dataDays;
     private SocSource dataSource;
 
     public DaysAdapterScrollView(SocSource dataSource) {
@@ -33,7 +32,7 @@ public class DaysAdapterScrollView extends RecyclerView.Adapter<DaysAdapterScrol
     public void onBindViewHolder(@NonNull DaysAdapterScrollView.ViewHolder viewHolder, int i) {
 //        viewHolder.getTextView().setText(dataDays[i]);
         Soc soc = dataSource.getSoc(i);
-        viewHolder.setData(soc.getDescription(), soc.getPicture());
+        viewHolder.setData(soc.getDescription(), soc.getPicture(), soc.getTemperature());
         Log.d("SocnetAdapter", "onBindViewHolder");
 
     }
@@ -44,23 +43,28 @@ public class DaysAdapterScrollView extends RecyclerView.Adapter<DaysAdapterScrol
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView description;
+        private TextView description, temperature;
         private ImageView image;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             description = itemView.findViewById(R.id.description);
             image = itemView.findViewById(R.id.imageView);
+            temperature = itemView.findViewById(R.id.showTempRecyclerView);
 
         }
 
-        public void setData(String description, int picture) {
+        public void setData(String description, int picture, String temperature) {
             getImage().setImageResource(picture);
             getDescription().setText(description);
+            getTemperature().setText(temperature);
         }
 
         public TextView getDescription() {
             return description;
+        }
+        public TextView getTemperature() {
+            return temperature;
         }
 
         public ImageView getImage() {

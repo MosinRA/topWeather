@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MyWeather</string>
     <string name="city"> Surgut</string>
-    <string name="temp">90</string>
+    <string name="temp">90 F</string>
     <string name="find">Find your city</string>
     <string name="Monday">Monday</string>
     <string name="Tuesday">Tuesday</string>
@@ -39,20 +39,31 @@
     </integer-array>
 
     <string-array name="temps">
-        <item>30</item>
-        <item>10</item>
-        <item>11</item>
-        <item>15</item>
-        <item>25</item>
+        <item>90 F</item>
+        <item>30 F</item>
+        <item>21 F</item>
+        <item>45 F</item>
+        <item>55 F</item>
     </string-array>
 
     <array name="pictures">
-        <item>@drawable/suno</item>
-        <item>@drawable/suno</item>
-        <item>@drawable/suno</item>
-        <item>@drawable/suno</item>
-        <item>@drawable/suno</item>
-        <item>@drawable/suno</item>
-        <item>@drawable/suno</item>
+        <item>@drawable/rain</item>
+        <item>@drawable/rain</item>
+        <item>@drawable/rain</item>
+        <item>@drawable/rain</item>
+        <item>@drawable/rain</item>
+        <item>@drawable/rain</item>
+        <item>@drawable/rain</item>
     </array>
+
+    <string-array name="tempsForCardView">
+        <item>90 F</item>
+        <item>30 F</item>
+        <item>21 F</item>
+        <item>45 F</item>
+        <item>55 F</item>
+        <item>15 F</item>
+        <item>20 F</item>
+    </string-array>
+
 </resources>
