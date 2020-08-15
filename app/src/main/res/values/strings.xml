@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">MyWeather</string>
+    <string name="city"> Surgut</string>
+    <string name="temp">90</string>
+    <string name="find">Find your city</string>
+    <string name="Monday">Monday</string>
+    <string name="Tuesday">Tuesday</string>
+    <string name="Wednesday">Wednesday</string>
+    <string name="Thursday">Thursday</string>
+    <string name="Friday">Friday</string>
+    <string name="Saturday">Saturday</string>
+    <string name="Sunday">Sunday</string>
+    <string name="empty_list" translatable="false">empty_list</string>
+
+    <string-array name="city_names">
+        <item>Surgut</item>
+        <item>Samara</item>
+        <item>Moscow</item>
+        <item>Taganrog</item>
+        <item>Ufa</item>
+    </string-array>
+
+    <string-array name="days_name">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+
+
+    </string-array>
+
+
+<!--    <integer-array name="weather_imgs">-->
+<!--        <item>@drawable/suno</item>-->
+<!--        <item>@drawable/suno</item>-->
+<!--        <item>@drawable/suno</item>-->
+<!--        <item>@drawable/suno</item>-->
+<!--        <item>@drawable/suno</item>-->
+<!--    </integer-array>-->
+
+    <string-array name="temps">
+        <item>30</item>
+        <item>10</item>
+        <item>11</item>
+        <item>15</item>
+        <item>25</item>
+    </string-array>
+</resources>

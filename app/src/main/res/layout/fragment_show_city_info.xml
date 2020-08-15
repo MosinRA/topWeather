@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/weatherIcoViewFragmentShowCityInfo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cityNameViewFragmentShowCityInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="@string/city"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/textSourceBig"
+        app:layout_constraintStart_toEndOf="@+id/weatherIcoViewFragmentShowCityInfo"
+        app:layout_constraintTop_toTopOf="@+id/weatherIcoViewFragmentShowCityInfo" />
+
+    <TextView
+        android:id="@+id/showTempViewFragmentShowCityInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/textSourceSmall"
+        android:text="@string/temp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/cityNameViewFragmentShowCityInfo"
+        app:layout_constraintTop_toBottomOf="@+id/cityNameViewFragmentShowCityInfo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
