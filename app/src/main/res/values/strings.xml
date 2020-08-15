@@ -45,4 +45,14 @@
         <item>15</item>
         <item>25</item>
     </string-array>
+
+    <array name="pictures">
+        <item>@drawable/suno</item>
+        <item>@drawable/suno</item>
+        <item>@drawable/suno</item>
+        <item>@drawable/suno</item>
+        <item>@drawable/suno</item>
+        <item>@drawable/suno</item>
+        <item>@drawable/suno</item>
+    </array>
 </resources>

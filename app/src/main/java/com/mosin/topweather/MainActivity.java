@@ -23,12 +23,16 @@ public class MainActivity extends AppCompatActivity {
         initOrientation();
         findView();
         String[] data = getResources().getStringArray(R.array.city_names);
-        String[] dataDays = getResources().getStringArray(R.array.days_name);
+//        String[] dataDays = getResources().getStringArray(R.array.days_name);
+
         if (currentPosition == 1) {
+            SocSource sourceData = new SocSource(getResources());
+            initDaysView(sourceData.build());
             initRecyclerView(data);
-            initDaysView(dataDays);
+            initDaysView(sourceData);
         }
         else initRecyclerView(data);
+
         }
 
     public void initOrientation(){
@@ -70,12 +74,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void initDaysView (String[] dataDays){
+    public void initDaysView (SocSource SourceData){
         RecyclerView recyclerViewDays = findViewById(R.id.recycler_day_view);
         recyclerViewDays.setHasFixedSize(true);
         LinearLayoutManager layoutManagerDays = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerViewDays.setLayoutManager(layoutManagerDays);
-        DaysAdapterScrollView adapterDays = new DaysAdapterScrollView(dataDays);
+        DaysAdapterScrollView adapterDays = new DaysAdapterScrollView(SourceData);
         recyclerViewDays.setAdapter(adapterDays);
     }
 

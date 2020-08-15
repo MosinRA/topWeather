@@ -3,4 +3,5 @@
     <dimen name="sizeItemText">18sp</dimen>
     <dimen name="textSourceBig">40sp</dimen>
     <dimen name="textSourceSmall">12dp</dimen>
+    <dimen name="middle">30sp</dimen>
 </resources>
