@@ -28,18 +28,15 @@
         <item>Friday</item>
         <item>Saturday</item>
         <item>Sunday</item>
-
-
     </string-array>
 
-
-<!--    <integer-array name="weather_imgs">-->
-<!--        <item>@drawable/suno</item>-->
-<!--        <item>@drawable/suno</item>-->
-<!--        <item>@drawable/suno</item>-->
-<!--        <item>@drawable/suno</item>-->
-<!--        <item>@drawable/suno</item>-->
-<!--    </integer-array>-->
+    <integer-array name="weather_imgs">
+        <item>@drawable/suno</item>
+        <item>@drawable/rain</item>
+        <item>@drawable/suno</item>
+        <item>@drawable/rain</item>
+        <item>@drawable/suno</item>
+    </integer-array>
 
     <string-array name="temps">
         <item>30</item>

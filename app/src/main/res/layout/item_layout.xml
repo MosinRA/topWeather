@@ -12,6 +12,4 @@
     android:paddingStart="16dp"
     android:textColor="@android:color/black"
     android:background="?attr/selectableItemBackground">
-
-
 </TextView>
