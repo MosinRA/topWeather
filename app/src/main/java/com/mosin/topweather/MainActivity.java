@@ -2,7 +2,6 @@ package com.mosin.topweather;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,17 +9,12 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     private int currentPosition = 0;
-    private boolean isLand;
-    TextView showCity;
-
+    private int indexArr = 0;
+    TextView showCity, showTempView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
         findView();
         String[] data = getResources().getStringArray(R.array.city_names);
         String[] dataDays = getResources().getStringArray(R.array.days_name);
-        if(currentPosition == 1){
+        if (currentPosition == 1) {
             initRecyclerView(data);
             initDaysView(dataDays);
         }
         else initRecyclerView(data);
-    }
+        }
 
     public void initOrientation(){
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
@@ -45,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void findView(){
         showCity = findViewById(R.id.cityNameViewFragmentShowCityInfo);
+        showTempView = findViewById(R.id.showTempViewFragmentShowCityInfo);
     }
 
     public void initRecyclerView (final String[] data){
@@ -53,19 +48,24 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        RecyclerAdapter adapter = new RecyclerAdapter(data);
+        final RecyclerAdapter adapter = new RecyclerAdapter(data);
         recyclerView.setAdapter(adapter);
 
         adapter.SetOnItemClickListener(new RecyclerAdapter.OnItemClickListener() {
+            String[] tempArr = getResources().getStringArray(R.array.temps);
+            String[] cityNamesArr = getResources().getStringArray(R.array.city_names);
             @Override
             public void onItemClick(View view, int position) {
+                indexArr = recyclerView.getChildLayoutPosition(view);
                 if (currentPosition == 0) {
-                    Intent intent = new Intent(MainActivity.this, ShowCitySinglModeActivity.class);
-                    intent.putExtra("cityName", ((TextView) view).getText());
+                    Intent intent = new Intent(MainActivity.this, ShowCitySingleModeActivity.class);
+                    intent.putExtra("cityIndex", indexArr);
                     startActivity(intent);
-                }else {
-                    showCity.setText(((TextView) view).getText());
-                   }
+                }
+                else {
+                    showCity.setText(cityNamesArr[indexArr]);
+                    showTempView.setText(tempArr[indexArr]);
+                }
             }
         });
     }
@@ -79,17 +79,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewDays.setAdapter(adapterDays);
     }
 
-    private Container getCoatContainer() {
-        String[] cities = getResources().getStringArray(R.array.city_names);
-        Container container = new Container();
-        container.position = currentPosition;
-        container.cityName = cities[currentPosition];
-        return container;
-    }
-
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
-        outState.putInt("CurrentCity", currentPosition);
+        outState.putInt("CurrentCity", indexArr);
         super.onSaveInstanceState(outState);
     }
 }

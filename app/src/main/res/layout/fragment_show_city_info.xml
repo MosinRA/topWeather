@@ -10,6 +10,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="12dp"
+        android:src="@drawable/rain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,5 +37,4 @@
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/cityNameViewFragmentShowCityInfo"
         app:layout_constraintTop_toBottomOf="@+id/cityNameViewFragmentShowCityInfo" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
