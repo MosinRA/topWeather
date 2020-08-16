@@ -1,6 +1,5 @@
 package com.mosin.topweather;
 
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -9,8 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ShowCitySinglModeActivity extends AppCompatActivity {
-    private TextView cityText;
+public class ShowCitySingleModeActivity extends AppCompatActivity {
+    private TextView cityText, showTemp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +22,16 @@ public class ShowCitySinglModeActivity extends AppCompatActivity {
             return;
         }
         if (savedInstanceState == null) {
-            Intent details = getIntent();
-            String cityName = details.getStringExtra("cityName");
-            cityText.setText(cityName);
+            String [] cityNames = getResources().getStringArray(R.array.city_names);
+            String [] showTempbyCity = getResources().getStringArray(R.array.temps);
+            int index = (int) getIntent().getSerializableExtra("cityIndex");
+            cityText.setText(cityNames[index]);
+            showTemp.setText(showTempbyCity[index]);;
         }
     }
     public void findViews(){
         cityText = findViewById(R.id.cityNameViewFragmentShowCityInfo);
+        showTemp = findViewById(R.id.showTempViewFragmentShowCityInfo);
     }
 
     @Override
@@ -40,3 +42,4 @@ public class ShowCitySinglModeActivity extends AppCompatActivity {
         return true;
     }
 }
+

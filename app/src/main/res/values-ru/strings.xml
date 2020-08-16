@@ -31,10 +31,20 @@
     </string-array>
 
     <string-array name="temps">
-        <item>30</item>
-        <item>10</item>
-        <item>11</item>
-        <item>15</item>
-        <item>25</item>
+        <item>30 C</item>
+        <item>10 C</item>
+        <item>11 C</item>
+        <item>15 C</item>
+        <item>25 C</item>
+    </string-array>
+
+    <string-array name="tempsForCardView">
+        <item>30 C</item>
+        <item>35 C</item>
+        <item>21 C</item>
+        <item>45 C</item>
+        <item>55 C</item>
+        <item>15 C</item>
+        <item>20 C</item>
     </string-array>
 </resources>
