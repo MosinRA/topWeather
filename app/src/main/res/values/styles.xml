@@ -7,4 +7,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="layoutSize">
+       <item name="android:layout_width">400dp</item>
+        <item name="android:layout_height">120dp</item>
+    </style>
+
+    <style name="margins">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MyWeather</string>
+    <string name="app_name">Погодка</string>
     <string name="city"> Сургут</string>
     <string name="temp">30</string>
     <string name="find">Найти Ваш город</string>
@@ -11,30 +11,15 @@
     <string name="Friday">Пятница</string>
     <string name="Saturday">Суббота</string>
     <string name="Sunday">Воскрессенье</string>
+    <string name="wind_speed">Скорость ветра</string>
+    <string name="humidity">Влажность</string>
+    <string name="pressure">Давление</string>
 
     <string-array name="city_names">
         <item>Сургут</item>
         <item>Самара</item>
         <item>Москва</item>
-        <item>Таганрог</item>
+        <item>Тамбов</item>
         <item>Уфа</item>
-    </string-array>
-
-    <string-array name="days_name">
-        <item>Понедельник</item>
-        <item>Вторник</item>
-        <item>Среда</item>
-        <item>Четверг</item>
-        <item>Пятница</item>
-        <item>Суббота</item>
-        <item>Воскрессенье</item>
-    </string-array>
-
-    <string-array name="temps">
-        <item>30</item>
-        <item>10</item>
-        <item>11</item>
-        <item>15</item>
-        <item>25</item>
     </string-array>
 </resources>
