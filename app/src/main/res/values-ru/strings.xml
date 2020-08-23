@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MyWeather</string>
+    <string name="app_name">Погодка</string>
     <string name="city"> Сургут</string>
     <string name="temp">30</string>
     <string name="find">Найти Ваш город</string>
@@ -11,40 +11,15 @@
     <string name="Friday">Пятница</string>
     <string name="Saturday">Суббота</string>
     <string name="Sunday">Воскрессенье</string>
+    <string name="wind_speed">Скорость ветра</string>
+    <string name="humidity">Влажность</string>
+    <string name="pressure">Давление</string>
 
     <string-array name="city_names">
         <item>Сургут</item>
         <item>Самара</item>
         <item>Москва</item>
-        <item>Таганрог</item>
+        <item>Тамбов</item>
         <item>Уфа</item>
-    </string-array>
-
-    <string-array name="days_name">
-        <item>Понедельник</item>
-        <item>Вторник</item>
-        <item>Среда</item>
-        <item>Четверг</item>
-        <item>Пятница</item>
-        <item>Суббота</item>
-        <item>Воскрессенье</item>
-    </string-array>
-
-    <string-array name="temps">
-        <item>30 C</item>
-        <item>10 C</item>
-        <item>11 C</item>
-        <item>15 C</item>
-        <item>25 C</item>
-    </string-array>
-
-    <string-array name="tempsForCardView">
-        <item>30 C</item>
-        <item>35 C</item>
-        <item>21 C</item>
-        <item>45 C</item>
-        <item>55 C</item>
-        <item>15 C</item>
-        <item>20 C</item>
     </string-array>
 </resources>

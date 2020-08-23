@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyWeather</string>
+    <string name="app_name">Top weather</string>
     <string name="city"> Surgut</string>
     <string name="temp">90 F</string>
     <string name="find">Find your city</string>
@@ -10,60 +10,21 @@
     <string name="Friday">Friday</string>
     <string name="Saturday">Saturday</string>
     <string name="Sunday">Sunday</string>
-    <string name="empty_list" translatable="false">empty_list</string>
+    <string name="wind_speed">Wind speed</string>
+    <string name="humidity">Humidity</string>
+    <string name="pressure">Pressure</string>
+    <string name="empty_list" translatable="false">empty_list
+    </string>
+    <string name="procent" translatable="false">%</string>
+    <string name="milibar" translatable="false">мб</string>
+    <string name="metre_to_second" translatable="false">м/с</string>
+    <string name="gradus">°</string>
 
     <string-array name="city_names">
         <item>Surgut</item>
         <item>Samara</item>
         <item>Moscow</item>
-        <item>Taganrog</item>
+        <item>Tambov</item>
         <item>Ufa</item>
     </string-array>
-
-    <string-array name="days_name">
-        <item>Monday</item>
-        <item>Tuesday</item>
-        <item>Wednesday</item>
-        <item>Thursday</item>
-        <item>Friday</item>
-        <item>Saturday</item>
-        <item>Sunday</item>
-    </string-array>
-
-    <integer-array name="weather_imgs">
-        <item>@drawable/suno</item>
-        <item>@drawable/rain</item>
-        <item>@drawable/suno</item>
-        <item>@drawable/rain</item>
-        <item>@drawable/suno</item>
-    </integer-array>
-
-    <string-array name="temps">
-        <item>90 F</item>
-        <item>30 F</item>
-        <item>21 F</item>
-        <item>45 F</item>
-        <item>55 F</item>
-    </string-array>
-
-    <array name="pictures">
-        <item>@drawable/rain</item>
-        <item>@drawable/rain</item>
-        <item>@drawable/rain</item>
-        <item>@drawable/rain</item>
-        <item>@drawable/rain</item>
-        <item>@drawable/rain</item>
-        <item>@drawable/rain</item>
-    </array>
-
-    <string-array name="tempsForCardView">
-        <item>90 F</item>
-        <item>30 F</item>
-        <item>21 F</item>
-        <item>45 F</item>
-        <item>55 F</item>
-        <item>15 F</item>
-        <item>20 F</item>
-    </string-array>
-
 </resources>
